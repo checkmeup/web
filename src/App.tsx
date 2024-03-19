@@ -1,23 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { MantineProvider, Text } from '@mantine/core';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { MantineProvider } from '@mantine/core';
+import { BrowserRouter } from 'react-router-dom';
+import { ModalsProvider } from '@mantine/modals';
+import { Notifications } from '@mantine/notifications';
 
-import pkg from '../package.json';
+import Routes from './Routes';
 
 import '@mantine/core/styles.css';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Text>Hello checkmeup.net! Version: {pkg.version}</Text>,
-  },
-]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <MantineProvider>
-      <RouterProvider router={router} />
+      <ModalsProvider>
+        <Notifications position="top-center" />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </ModalsProvider>
     </MantineProvider>
   </React.StrictMode>,
 );

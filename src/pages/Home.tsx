@@ -1,6 +1,10 @@
 import { Text } from '@mantine/core';
-import pkg from '../../package.json';
+import Footer from '../components/Footer';
 
-const Home = () => <Text>Hello checkmeup.net! Version: {pkg.version}</Text>;
-
+const Home = () => (
+  <>
+    <Text>Home</Text>
+    <Footer />
+  </>
+);
 export default Home;

@@ -1,33 +1,29 @@
-import { AppShell, Burger } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { AppShell, Center, Image, Text, Container } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const Layout = () => {
-  const [opened, { toggle }] = useDisclosure();
-
   return (
-    <AppShell
-      header={{ height: 60 }}
-      navbar={{
-        width: 300,
-        breakpoint: 'sm',
-        collapsed: { mobile: !opened },
-      }}
-      padding="md"
-    >
-      <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div>Logo</div>
-      </AppShell.Header>
+    <Container>
+      <AppShell header={{ height: 50 }} padding="md">
+        <AppShell.Header>
+          <Container h={'100%'}>
+            <Center inline h={'100%'}>
+              <Image src={'favicon.svg'} alt="checkmeup.net" height={'40'} p={'5'} />
+              <Text size="xl">checkmeup.net</Text>
+            </Center>
+          </Container>
+        </AppShell.Header>
 
-      <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
+        <AppShell.Main>
+          <Outlet />
+        </AppShell.Main>
 
-      <AppShell.Main>
-        <Outlet />
-        <Footer />
-      </AppShell.Main>
-    </AppShell>
+        <AppShell.Footer>
+          <Footer />
+        </AppShell.Footer>
+      </AppShell>
+    </Container>
   );
 };
 

@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ModalsProvider } from '@mantine/modals';
 import { Notifications } from '@mantine/notifications';
 
-import Routes from './Routes';
+import Routes from '@/app/routes';
 
 import '@mantine/core/styles.css';
 

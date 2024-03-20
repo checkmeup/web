@@ -1,6 +1,6 @@
 import { AppShell, Center, Image, Text, Container } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
-import Footer from '../components/Footer';
+import Footer from '../widgets/Footer';
 
 const Layout = () => {
   return (

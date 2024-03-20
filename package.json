@@ -2,7 +2,7 @@
   "name": "vite-project",
   "homepage": "https://checkmeup.net/",
   "private": true,
-  "version": "0.0.12",
+  "version": "0.0.13",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -51,8 +51,8 @@ const Home = () => {
       </p>
       <table width={'100%'}>
         <tr>
-          <th>Date</th>
-          <th>Item</th>
+          <th align="left">Date</th>
+          <th align="left">Effort</th>
           <th align="right">Cost</th>
         </tr>
         <tr>
@@ -60,8 +60,12 @@ const Home = () => {
           <td>Website initial setup and deploy implementation</td>
           <td align="right">4 hours</td>
         </tr>
+        <tr>
+          <td>20/03/2024</td>
+          <td>Add layout</td>
+          <td align="right">1 hours</td>
+        </tr>
       </table>
-      <Footer />
     </>
   );
 };

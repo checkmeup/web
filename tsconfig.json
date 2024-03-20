@@ -7,12 +7,7 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"],
-      "@app/*": ["app/*"],
-      "@features/*": ["features/*"],
-      "@pages/*": ["pages/*"],
-      "@shared/*": ["shared/*"],
-      "@widgets/*": ["widgets/*"]
+      "@/*": ["*"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",

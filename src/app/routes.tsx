@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Layout from '@pages/Layout';
-import { HomePage } from '@pages/home';
-import Login from '@pages/Login';
-import Register from '@pages/Register';
-import NotFound from '@pages/errors/NotFound';
-import Blog from '@pages/Blog';
+import Layout from '@/pages/Layout';
+import { HomePage, BlogPage } from '@/pages';
+import Login from '@/pages/Login';
+import Register from '@/pages/Register';
+import NotFound from '@/pages/errors/NotFound';
 
 const AppRoutes = () => {
   return (
@@ -14,7 +13,7 @@ const AppRoutes = () => {
         <Route index element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

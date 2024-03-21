@@ -42,23 +42,25 @@ export const BlogPage = () => {
         should provide a good overview of the project and the costs of running it for any potential users and
         contributors.
       </p>
-      <table width={'100%'}>
-        <tr>
-          <th align="left">Date</th>
-          <th align="left">Effort</th>
-          <th align="right">Cost</th>
-        </tr>
-        <tr>
-          <td>19/03/2024</td>
-          <td>Website initial setup and deploy implementation</td>
-          <td align="right">4 hours</td>
-        </tr>
-        <tr>
-          <td>20/03/2024</td>
-          <td>Add layout and adjust code to FSD structure</td>
-          <td align="right">2 hours</td>
-        </tr>
-      </table>
+      <p>
+        <table width={'100%'}>
+          <tr>
+            <th align="left">Date</th>
+            <th align="left">Effort</th>
+            <th align="right">Cost</th>
+          </tr>
+          <tr>
+            <td>19/03/2024</td>
+            <td>Website initial setup and deploy implementation</td>
+            <td align="right">4 hours</td>
+          </tr>
+          <tr>
+            <td>20/03/2024</td>
+            <td>Add layout and adjust code to FSD structure</td>
+            <td align="right">2 hours</td>
+          </tr>
+        </table>
+      </p>
     </div>
   );
 };

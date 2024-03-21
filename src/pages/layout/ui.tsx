@@ -5,7 +5,7 @@ import { Header, Footer } from '@/widgets';
 export const LayoutPage = () => {
   return (
     <Container>
-      <AppShell header={{ height: 50 }} padding="md" footer={{ height: 50 }}>
+      <AppShell header={{ height: '60px' }} padding="md" footer={{ height: 50 }}>
         <AppShell.Header>
           <Header />
         </AppShell.Header>

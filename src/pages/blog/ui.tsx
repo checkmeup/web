@@ -59,6 +59,11 @@ export const BlogPage = () => {
             <td>Add layout and adjust code to FSD structure</td>
             <td align="right">2 hours</td>
           </tr>
+          <tr>
+            <td>21/03/2024</td>
+            <td>Implement top navigation header and fix minor issues in the pages</td>
+            <td align="right">2 hours</td>
+          </tr>
         </table>
       </p>
     </div>

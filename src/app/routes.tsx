@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { LayoutPage, HomePage, BlogPage, LoginPage, RegisterPage, NotFoundPage } from '@/pages';
+import { LayoutPage, HomePage, BlogPage, LoginPage, SignUpPage, NotFoundPage, StatsPage } from '@/pages';
 
 const AppRoutes = () => {
   return (
@@ -8,8 +8,9 @@ const AppRoutes = () => {
       <Route path="/" element={<LayoutPage />}>
         <Route index element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/stats" element={<StatsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

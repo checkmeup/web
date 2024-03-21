@@ -1,4 +1,4 @@
-import { Group, Button, Divider, Box, Burger, Drawer, ScrollArea, rem, Text } from '@mantine/core';
+import { Group, Button, Divider, Box, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
 import { Logo } from '@/widgets/logo';
 import { useDisclosure } from '@mantine/hooks';
 

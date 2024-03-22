@@ -1,47 +1,70 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { Group, Button, Divider, Box, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
 import { Logo } from '@/widgets/logo';
 import { useDisclosure } from '@mantine/hooks';
 
 import classes from './classes.module.css';
 
+const links = [
+  { link: '/', label: 'Home' },
+  { link: '/blog', label: 'Blog' },
+  { link: '/stats', label: 'Stats' },
+];
+
 export const Header = () => {
+  const navigate = useNavigate();
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+
+  const index = links.findIndex((item) => location.pathname.toLowerCase() === item.link.toLowerCase());
+  const [active, setActive] = useState(index);
+
+  const menuItems = links.map((item, index) => (
+    <a
+      key={index}
+      href={item.link}
+      className={classes.link}
+      data-active={index === active || undefined}
+      onClick={(event) => {
+        event.preventDefault();
+        setActive(index);
+        navigate(item.link);
+      }}
+    >
+      {item.label}
+    </a>
+  ));
 
   return (
     <Box pb={120}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Group>
-            <Logo />
-            <a className={classes.logo} href="/">
+          <a className={classes.logo} href="/">
+            <Group>
+              <Logo />
               checkmeup.net
-            </a>
-          </Group>
+            </Group>
+          </a>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="/" className={classes.link}>
-              Home
-            </a>
-            <a href="/blog" className={classes.link}>
-              Blog
-            </a>
-            <a href="/stats" className={classes.link}>
-              Stats
-            </a>
+            {menuItems}
           </Group>
 
           <Group visibleFrom="sm">
             <Button
               variant="default"
               onClick={() => {
-                location.href = '/login';
+                setActive(-1);
+                navigate('/login');
               }}
             >
               Log in
             </Button>
             <Button
               onClick={() => {
-                location.href = '/signup';
+                setActive(-1);
+                navigate('/signup');
               }}
             >
               Sign up

@@ -28,7 +28,7 @@
   }
 
   &[data-active] {
-    border-bottom-color: var(--mantine-color-blue-6);
+    border-bottom-color: var(--mantine-color-green-9);
   }
 }
 

@@ -42,13 +42,15 @@ export const BlogPage = () => {
         should provide a good overview of the project and the costs of running it for any potential users and
         contributors.
       </p>
-      <p>
-        <table width={'100%'}>
+      <table width={'100%'}>
+        <thead>
           <tr>
             <th align="left">Date</th>
             <th align="left">Effort</th>
             <th align="right">Cost</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>19/03/2024</td>
             <td>Website initial setup and deploy implementation</td>
@@ -64,8 +66,13 @@ export const BlogPage = () => {
             <td>Implement top navigation header and fix minor issues in the pages</td>
             <td align="right">2 hours</td>
           </tr>
-        </table>
-      </p>
+          <tr>
+            <td>23/03/2024</td>
+            <td>Move to Netlify deployment and fix active mark on the top navigation</td>
+            <td align="right">3 hours</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

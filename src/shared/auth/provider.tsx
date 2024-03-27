@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useStrictEffect } from '@/shared/effect';
 
 import { AuthContext } from './context';
 
 // Create a provider component
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
+  useStrictEffect(() => {
     console.log('AuthProvider mounted');
 
     return () => {
       console.log('AuthProvider unmounted');
     };
-  }, []);
+  });
   const [isAuthenticated, setIsAuthenticated] = React.useState(localStorage.getItem('isAuthenticated') === 'true');
 
   const login = () => {

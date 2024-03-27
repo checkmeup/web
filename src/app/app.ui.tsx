@@ -1,23 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { MantineProvider } from '@mantine/core';
 import { ModalsProvider } from '@mantine/modals';
 import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { AppRoutes } from './routes';
+import { RoutesUI } from './routes.ui';
+import { AuthProvider } from '@/shared/auth';
 
 import '@mantine/core/styles.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <MantineProvider>
+export const AppUI = () => (
+  <MantineProvider>
+    <AuthProvider>
       <QueryClientProvider client={new QueryClient()}>
         <ModalsProvider>
           <Notifications position="top-center" />
-          <AppRoutes />
+          <RoutesUI />
         </ModalsProvider>
       </QueryClientProvider>
-    </MantineProvider>
-  </React.StrictMode>,
+    </AuthProvider>
+  </MantineProvider>
 );

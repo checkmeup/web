@@ -2,7 +2,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import { LayoutPage, HomePage, BlogPage, LoginPage, SignUpPage, NotFoundPage, StatsPage } from '@/pages';
 
-export const AppRoutes = () => {
+export const RoutesUI = () => {
   return (
     <BrowserRouter>
       <Routes>

@@ -17,15 +17,6 @@ export const HomePage = () => {
         You can find the source code on <a href="https://github.com/checkmeup">GitHub</a>. Feel free to contribute or
         use it for your own purposes.
       </p>
-      <Group>
-        <Text>{isAuthenticated ? 'You are logged in' : 'You are not logged in'}</Text>
-        <Button color="green" onClick={login}>
-          Login
-        </Button>
-        <Button color="red" onClick={logout}>
-          Logout
-        </Button>
-      </Group>
     </>
   );
 };

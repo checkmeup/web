@@ -2,7 +2,7 @@ import { AppShell, Container } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 import { Header, Footer } from '~/widgets';
 
-export const LayoutPage = () => {
+export const DefaultLayout = () => {
   return (
     <Container>
       <AppShell header={{ height: '60px' }} padding="md" footer={{ height: 50 }}>

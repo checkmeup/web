@@ -1,12 +1,12 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import { LayoutPage, HomePage, BlogPage, LoginPage, SignUpPage, NotFoundPage, StatsPage } from '~/pages';
+import { DefaultLayout, HomePage, BlogPage, LoginPage, SignUpPage, NotFoundPage, StatsPage } from '~/pages';
 
 export const RoutesUI = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LayoutPage />}>
+        <Route path="/" element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />

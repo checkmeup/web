@@ -1,4 +1,8 @@
+import { Button, Group } from '@mantine/core';
+import { useAuth } from '~/shared/auth';
+
 export const HomePage = () => {
+  const { isAuthenticated, login, logout } = useAuth();
   return (
     <>
       <h1>Hello over there!</h1>
@@ -12,6 +16,15 @@ export const HomePage = () => {
         You can find the source code on <a href="https://github.com/checkmeup">GitHub</a>. Feel free to contribute or
         use it for your own purposes.
       </p>
+      <p>{isAuthenticated ? 'You are authenticated' : 'You are not authenticated'}</p>
+      <Group>
+        <Button color="blue" onClick={() => login()}>
+          Login
+        </Button>
+        <Button color="red" onClick={() => logout()}>
+          Logout
+        </Button>
+      </Group>
     </>
   );
 };

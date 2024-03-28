@@ -1,6 +1,6 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import { DefaultLayout, HomePage, BlogPage, LoginPage, SignUpPage, NotFoundPage, StatsPage } from '~/pages';
+import { DefaultLayout, HomePage, BlogPage, AuthPage, NotFoundPage, StatsPage } from '~/pages';
 
 export const RoutesUI = () => {
   return (
@@ -8,8 +8,7 @@ export const RoutesUI = () => {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<AuthPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/stats" element={<StatsPage />} />
           <Route path="*" element={<NotFoundPage />} />

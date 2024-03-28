@@ -53,21 +53,12 @@ export const Header = () => {
 
           <Group visibleFrom="sm">
             <Button
-              variant="default"
               onClick={() => {
                 setActive(-1);
-                navigate('/login');
+                navigate('/auth');
               }}
             >
               Log in
-            </Button>
-            <Button
-              onClick={() => {
-                setActive(-1);
-                navigate('/signup');
-              }}
-            >
-              Sign up
             </Button>
           </Group>
 

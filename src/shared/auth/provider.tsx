@@ -6,8 +6,6 @@ import { AuthContext } from './context';
 // Create a provider component
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useStrictEffect(() => {
-    console.log('AuthProvider mounted');
-
     return () => {
       console.log('AuthProvider unmounted');
     };

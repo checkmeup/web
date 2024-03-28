@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStrictEffect } from '@/shared/effect';
+import { useStrictEffect } from '~/shared/effect';
 
 import { AuthContext } from './context';
 

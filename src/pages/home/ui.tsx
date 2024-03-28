@@ -1,9 +1,4 @@
-import { Button, Group, Text } from '@mantine/core';
-
-import { useAuth } from '@/shared/auth';
-
 export const HomePage = () => {
-  const { isAuthenticated, login, logout } = useAuth();
   return (
     <>
       <h1>Hello over there!</h1>

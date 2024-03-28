@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Group, Button, Divider, Box, Burger, Drawer, ScrollArea, rem } from '@mantine/core';
-import { Logo } from '@/widgets/logo';
+import { Logo } from '~/widgets/logo';
 import { useDisclosure } from '@mantine/hooks';
 
 import classes from './classes.module.css';

@@ -1,6 +1,6 @@
 import { AppShell, Container } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
-import { Header, Footer } from '@/widgets';
+import { Header, Footer } from '~/widgets';
 
 export const LayoutPage = () => {
   return (

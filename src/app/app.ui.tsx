@@ -4,7 +4,7 @@ import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { RoutesUI } from './routes.ui';
-import { AuthProvider } from '@/shared/auth';
+import { AuthProvider } from '~/shared/auth';
 
 import '@mantine/core/styles.css';
 

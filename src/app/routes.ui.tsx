@@ -8,7 +8,7 @@ export const RoutesUI = () => {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/login" element={<AuthPage />} />
+          <Route path="/auth" element={<AuthPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/stats" element={<StatsPage />} />
           <Route path="*" element={<NotFoundPage />} />

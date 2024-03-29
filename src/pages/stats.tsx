@@ -9,37 +9,12 @@ export const StatsPage = () => {
         should provide a good overview of the project and the costs of running it for any potential users and
         contributors.
       </p>
-      <table width={'100%'}>
-        <thead>
-          <tr>
-            <th align="left">Date</th>
-            <th align="left">Effort</th>
-            <th align="right">Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>19/03/2024</td>
-            <td>Website initial setup and deploy implementation</td>
-            <td align="right">4 hours</td>
-          </tr>
-          <tr>
-            <td>20/03/2024</td>
-            <td>Add layout and adjust code to FSD structure</td>
-            <td align="right">2 hours</td>
-          </tr>
-          <tr>
-            <td>21/03/2024</td>
-            <td>Implement top navigation header and fix minor issues in the pages</td>
-            <td align="right">2 hours</td>
-          </tr>
-          <tr>
-            <td>23/03/2024</td>
-            <td>Move to Netlify deployment and fix active mark on the top navigation</td>
-            <td align="right">3 hours</td>
-          </tr>
-        </tbody>
-      </table>
+      <h4>March, 2024</h4>
+      <p>
+        I have started the project on 19th of March, 2024. I have spent 20 hours on the project so far. I have created
+        basic layout, added routing and created auth page. I have also added notifications and modals providers, created
+        auth context and created first version of the app routes.
+      </p>
     </div>
   );
 };

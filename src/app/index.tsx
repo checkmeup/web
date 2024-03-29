@@ -3,18 +3,18 @@ import { ModalsProvider } from '@mantine/modals';
 import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { RoutesUI } from './routes.ui';
+import { AppRoutes } from './app-routes';
 import { AuthProvider } from '~/shared/auth';
 
 import '@mantine/core/styles.css';
 
-export const AppUI = () => (
+export const App = () => (
   <MantineProvider>
     <AuthProvider>
       <QueryClientProvider client={new QueryClient()}>
         <ModalsProvider>
           <Notifications position="top-center" />
-          <RoutesUI />
+          <AppRoutes />
         </ModalsProvider>
       </QueryClientProvider>
     </AuthProvider>

@@ -2,7 +2,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import { DefaultLayout, HomePage, BlogPage, AuthPage, NotFoundPage, StatsPage } from '~/pages';
 
-export const RoutesUI = () => {
+export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>

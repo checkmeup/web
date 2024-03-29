@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { AppUI } from './app/app.ui';
+import { App } from './app';
 
 // This is the entry point of the application
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AppUI />
+    <App />
   </React.StrictMode>,
 );

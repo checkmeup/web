@@ -1,3 +1,3 @@
-import { AuthPage } from './ui';
+import { AuthPage } from './ui/page';
 
 export { AuthPage };

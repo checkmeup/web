@@ -7,6 +7,7 @@ import { AppRoutes } from './app-routes';
 import { AuthProvider } from '~/shared/auth';
 
 import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
 
 export const App = () => (
   <MantineProvider>

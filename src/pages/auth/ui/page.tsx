@@ -17,6 +17,7 @@ import {
 import { GoogleButton } from './google-button';
 import { TwitterButton } from './twitter-button';
 import { GithubButton } from './github-button';
+import { notifications } from '@mantine/notifications';
 
 export function AuthPage(props: PaperProps) {
   const [type, toggle] = useToggle(['login', 'register']);
@@ -34,6 +35,25 @@ export function AuthPage(props: PaperProps) {
     },
   });
 
+  const googleOnClick = () => {
+    notifications.show({
+      title: 'Google auth',
+      message: 'It is not implemented yet',
+    });
+  };
+  const githubOnClick = () => {
+    notifications.show({
+      title: 'GitHub auth',
+      message: 'It is not implemented yet',
+    });
+  };
+  const twitterOnClick = () => {
+    notifications.show({
+      title: 'Twitter auth',
+      message: 'It is not implemented yet',
+    });
+  };
+
   return (
     <Container size={460} my={30}>
       <Paper radius="md" p="xl" withBorder {...props}>
@@ -42,9 +62,15 @@ export function AuthPage(props: PaperProps) {
         </Text>
 
         <Group grow mb="md" mt="md">
-          <GoogleButton radius="xl">Google</GoogleButton>
-          <TwitterButton radius="xl">Twitter</TwitterButton>
-          <GithubButton radius="xl">GitHub</GithubButton>
+          <GoogleButton radius="xl" onClick={googleOnClick}>
+            Google
+          </GoogleButton>
+          <TwitterButton radius="xl" onClick={twitterOnClick}>
+            Twitter
+          </TwitterButton>
+          <GithubButton radius="xl" onClick={githubOnClick}>
+            GitHub
+          </GithubButton>
         </Group>
 
         <Divider label="Or continue with email" labelPosition="center" my="lg" />

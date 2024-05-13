@@ -1,23 +1,12 @@
-import { AppShell, Container } from '@mantine/core';
-import { Outlet } from 'react-router-dom';
-import { Header, Footer } from '~/widgets';
+import { Outlet } from 'react-router-dom'
+import { Header, Footer } from '~/widgets'
 
 export const DefaultLayout = () => {
   return (
-    <Container>
-      <AppShell header={{ height: '60px' }} padding="md" footer={{ height: 50 }}>
-        <AppShell.Header>
-          <Header />
-        </AppShell.Header>
-
-        <AppShell.Main>
-          <Outlet />
-        </AppShell.Main>
-
-        <AppShell.Footer>
-          <Footer />
-        </AppShell.Footer>
-      </AppShell>
-    </Container>
-  );
-};
+    <div className="relative mx-auto max-w-screen-xl bg-green-50 px-5">
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  )
+}

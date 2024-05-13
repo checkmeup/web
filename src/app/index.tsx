@@ -1,23 +1,17 @@
-import { MantineProvider } from '@mantine/core';
-import { ModalsProvider } from '@mantine/modals';
-import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { AppRoutes } from './app-routes';
 import { AuthProvider } from '~/shared/auth';
 
-import '@mantine/core/styles.css';
-import '@mantine/notifications/styles.css';
+import './tailwind.css';
+import { Flowbite } from 'flowbite-react';
 
 export const App = () => (
-  <MantineProvider>
+  <Flowbite>
     <AuthProvider>
       <QueryClientProvider client={new QueryClient()}>
-        <ModalsProvider>
-          <Notifications position="top-center" />
-          <AppRoutes />
-        </ModalsProvider>
+        <AppRoutes />
       </QueryClientProvider>
     </AuthProvider>
-  </MantineProvider>
+  </Flowbite>
 );

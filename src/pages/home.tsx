@@ -1,5 +1,5 @@
-import { Button, Group } from '@mantine/core';
 import { useAuth } from '~/shared/auth';
+import { Button } from 'flowbite-react';
 
 export const HomePage = () => {
   const { isAuthenticated, login, logout } = useAuth();
@@ -17,14 +17,12 @@ export const HomePage = () => {
         use it for your own purposes.
       </p>
       <p>{isAuthenticated ? 'You are authenticated' : 'You are not authenticated'}</p>
-      <Group>
-        <Button color="blue" onClick={() => login()}>
-          Login
-        </Button>
-        <Button color="red" onClick={() => logout()}>
-          Logout
-        </Button>
-      </Group>
+      <Button color="blue" onClick={() => login()}>
+        Login
+      </Button>
+      <Button color="red" onClick={() => logout()}>
+        Logout
+      </Button>
     </>
   );
 };

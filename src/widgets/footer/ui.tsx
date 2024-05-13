@@ -1,12 +1,11 @@
-import { Center, Text } from '@mantine/core';
-import pkg from '~/../package.json';
+import pkg from '~/../package.json'
 
 export const Footer = () => {
   return (
-    <footer>
-      <Center w={'100%'} bg={'dark'} h={'50'}>
-        <Text c={'white'}>2024 &copy; checkmeup.net &middot; v{pkg.version}</Text>
-      </Center>
+    <footer className=" bg-slate-500">
+      <div className="relative mx-auto max-w-screen-xl bg-red-50 text-center">
+        2024 &copy; checkmeup.net &middot; v{pkg.version}
+      </div>
     </footer>
-  );
-};
+  )
+}

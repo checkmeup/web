@@ -1,0 +1,13 @@
+{
+  "ignorePatterns": ["dist/*", "node_modules/*", "*.d.ts", "*.json"],
+  "env": { "browser": true, "es6": true, "node": true },
+  "bracketSpacing": true,
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindAttributes": ["theme"],
+  "tailwindFunctions": ["twMerge", "createTheme"]
+}

@@ -1,3 +1,3 @@
-import logo from './logo.svg';
+import logo from './logo.svg'
 
-export const Logo = () => <img src={logo} alt="logo" />;
+export const Logo = () => <img src={logo} alt="logo" />

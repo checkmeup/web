@@ -1,3 +1,3 @@
-import { useStrictEffect } from './hook';
+import { useStrictEffect } from './hook'
 
-export { useStrictEffect };
+export { useStrictEffect }

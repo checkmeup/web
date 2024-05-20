@@ -1,13 +1,13 @@
-import type { EffectCallback } from 'react';
-import { useEffect, useRef } from 'react';
+import type { EffectCallback } from 'react'
+import { useEffect, useRef } from 'react'
 
 export const useStrictEffect = (effect: EffectCallback) => {
-  const isMounted = useRef(false);
+  const isMounted = useRef(false)
 
   useEffect(() => {
     if (!isMounted.current) {
-      isMounted.current = true;
-      effect();
+      isMounted.current = true
+      effect()
     }
-  }, [effect]);
-};
+  }, [effect])
+}

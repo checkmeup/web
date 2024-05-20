@@ -1,6 +1,6 @@
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
-import { DefaultLayout, HomePage, BlogPage, AuthPage, NotFoundPage, StatsPage } from '~/pages';
+import { DefaultLayout, HomePage, BlogPage, AuthPage, NotFoundPage, StatsPage } from '~/pages'
 
 export const AppRoutes = () => {
   return (
@@ -15,5 +15,5 @@ export const AppRoutes = () => {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
-};
+  )
+}

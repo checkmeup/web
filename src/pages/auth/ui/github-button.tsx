@@ -6,5 +6,5 @@
 // }
 
 export function GithubButton() {
-  return <div></div>;
+  return <div></div>
 }

@@ -36,5 +36,5 @@ export const BlogPage = () => {
         <li>As a user I want to receive email notification when a cron job fails so that I can fix it.</li>
       </ul>
     </div>
-  );
-};
+  )
+}

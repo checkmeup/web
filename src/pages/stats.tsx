@@ -16,5 +16,5 @@ export const StatsPage = () => {
         auth context and created first version of the app routes.
       </p>
     </div>
-  );
-};
+  )
+}

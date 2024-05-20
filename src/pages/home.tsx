@@ -1,8 +1,8 @@
-import { useAuth } from '~/shared/auth';
-import { Button } from 'flowbite-react';
+import { useAuth } from '~/shared/auth'
+import { Button } from 'flowbite-react'
 
 export const HomePage = () => {
-  const { isAuthenticated, login, logout } = useAuth();
+  const { isAuthenticated, login, logout } = useAuth()
   return (
     <>
       <h1>Hello over there!</h1>
@@ -24,5 +24,5 @@ export const HomePage = () => {
         Logout
       </Button>
     </>
-  );
-};
+  )
+}

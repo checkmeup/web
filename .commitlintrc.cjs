@@ -10,4 +10,4 @@
 
 // A commit that appends a ! after the type/scope, introduces a breaking API change
 
-module.exports = { extends: ['@commitlint/config-conventional'] };
+module.exports = { extends: ['@commitlint/config-conventional'] }

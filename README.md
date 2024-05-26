@@ -5,7 +5,7 @@
 
 This is the repository for the CheckMeUp website.
 
-The project use the Feature-Sliced Design methodology and defines the following folders structure:
+The project use the Feature-Sliced Design ([FSD](https://feature-sliced.design/])) methodology and defines the following folders structure:
 
 ```sh
 └── src/

@@ -104,5 +104,5 @@
 // };
 
 export const Header = () => {
-  return <div className="relative mx-auto max-w-screen-xl bg-red-50 text-center">Header</div>
+  return <div className="relative mx-auto max-w-screen-xl text-center">Header</div>
 }

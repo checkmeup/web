@@ -3,7 +3,7 @@ import { Header, Footer } from '~/widgets'
 
 export const DefaultLayout = () => {
   return (
-    <div className="relative mx-auto max-w-screen-xl bg-green-50 px-5">
+    <div className="relative mx-auto max-w-screen-xl px-5">
       <Header />
       <Outlet />
       <Footer />

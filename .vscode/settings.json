@@ -1,0 +1,36 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, eslint*, .prettier*, .editorconfig, postcss.config.*, tailwind.config.*, cspell.*",
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*"
+  },
+
+  // Editor settings
+  "editor.codeActionsOnSave": { "source.fixAll": "explicit" },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "300",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.glyphMargin": false,
+  "editor.hover.delay": 1500,
+  "editor.letterSpacing": 0.5,
+  "editor.lineHeight": 1.5,
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestions": { "strings": "on" },
+  "editor.rulers": [120],
+
+  // Terminal settings
+  "terminal.integrated.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.letterSpacing": 0.5,
+
+  // Tailwind CSS settings
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}

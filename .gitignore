@@ -1,0 +1,13 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Misc
+node_modules
+.DS_Store
+dist
+
+# Editor directories and files
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

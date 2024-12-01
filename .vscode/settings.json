@@ -30,7 +30,5 @@
   "terminal.integrated.letterSpacing": 0.5,
 
   // Tailwind CSS settings
-  "files.associations": {
-    "*.css": "tailwindcss"
-  }
+  "css.lint.unknownAtRules": "ignore"
 }

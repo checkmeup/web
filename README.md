@@ -1,21 +1,23 @@
 # Web Interface for checkmeup.net
 
-This project aims to provide a simple web interface for the checkmeup.net application, following the principles of Feature Sliced Design (FSD).
+This project provides a simple web interface for the checkmeup.net application, following Feature Sliced Design (FSD) principles.
 
 ## Feature Sliced Design (FSD)
 
-Feature Sliced Design (FSD) is an architectural methodology for frontend projects. It focuses on dividing the application into distinct layers and slices to improve scalability, maintainability, and reusability. The main principles include:
+Feature Sliced Design (FSD) is an architectural methodology for frontend projects. It divides the application into layers and slices to enhance scalability, maintainability, and reusability. Key principles include:
 
-1. **Layered Architecture**: Separating the application into layers such as app, processes, pages, features, entities, shared, etc.
-2. **Sliced Structure**: Dividing the application into slices based on business domains or features.
-3. **Isolation and Encapsulation**: Ensuring that each slice and layer is isolated and encapsulated to reduce dependencies and improve modularity.
-4. **Explicit Dependencies**: Making dependencies between slices and layers explicit to improve clarity and maintainability.
+1. **Layered Architecture**: Separating the application into layers: app, pages, widgets, features, entities and shared.
+2. **Sliced Structure**: Dividing the application layers into slices to improve organization and maintainability.
+3. **Isolation and Encapsulation**: Ensuring each slice and layer is isolated and encapsulated to reduce dependencies and improve modularity.
+4. **Explicit Dependencies**: Making dependencies between layers and slices explicit to improve clarity and maintainability.
 
-For more information about FSD, visit [this link](https://www.feature-sliced.design/).
+For more information about FSD, visit [Feature Sliced Design](https://www.feature-sliced.design/).
+
+Each folder in the `src` directory represents a separate layer of the application and contains a `README.md` file with more information about the layer.
 
 ## Tailwind CSS
 
-Additionally, this project utilizes Tailwind CSS as its primary CSS framework. For more information about Tailwind CSS, visit [this link](https://tailwindcss.com/).
+This project uses Tailwind CSS as its primary CSS framework. For more information, visit [Tailwind CSS](https://tailwindcss.com/).
 
 ## License
 

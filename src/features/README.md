@@ -1,18 +1,17 @@
-# features
+# Features
 
-Features - это use-case, это то, что пользователь или сама система могут делать с приложением.
-На начальных этапах можно держать ui и model в одном файле, но при увеличении сложности приложения, их стоит разделить.
-В данном случае auth и user - это не слайсы, а просто части пути для группировки слайсов
+Features represent use-cases, actions that users or the system can perform within the application. Initially, UI and model can be combined in one file, but they should be separated as the application grows in complexity.
 
-- auth
+## Subfolders
 
-  - check-sign-in.ts - слайс
-  - sign-in-user.ts - слайс
-  - sign-out.ts - слайс
+Features are the active layer of the application and contain use cases. They can be organized into folders. These folders may contain simple files with feature logic or more complex structures with subfolders.
 
-- user
-  - create
-    - ui
-    - create-user-form.ts
-    - index.ts
-  - remove - index.ts
+## Rules
+
+- Define all actions in business terms.
+- Control entity instantiation within application boundaries.
+- Group features into folders based on application logic.
+- Include UI components related to the feature, such as forms, modals, and buttons.
+- Manage local states of edit forms.
+- Include feature slices like `create`, `update`, `delete`, `list`, etc.
+- Cross-referencing is prohibited; use "duck typing" instead. Do not apply the DRY principle to features.

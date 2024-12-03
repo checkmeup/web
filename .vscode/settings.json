@@ -21,7 +21,7 @@
   "editor.lineHeight": 1.5,
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": { "strings": "on" },
-  "editor.rulers": [120],
+  "editor.rulers": [140],
 
   // Terminal settings
   "terminal.integrated.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",

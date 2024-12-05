@@ -21,4 +21,4 @@ This project uses Tailwind CSS as its primary CSS framework. For more informatio
 
 ## License
 
-This project is licensed under the MIT License. For details, see the [LICENSE](LICENSE) file.
+This project is licensed under the MIT License(LICENSE). [Here's what it means](https://choosealicense.com/licenses/mit/)

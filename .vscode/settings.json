@@ -1,7 +1,7 @@
 {
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "package.json": "package-lock.json, eslint*, .prettier*, .editorconfig, postcss.config.*, tailwind.config.*, cspell.*",
+    "package.json": "package-lock.json, .prettier*, .editorconfig, cspell.*, *.config.js",
     "tsconfig.json": "tsconfig.*.json, env.d.ts",
     "vite.config.*": "jsconfig*"
   },

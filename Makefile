@@ -28,6 +28,11 @@ install:
 	bun install
 @PHONY: install
 
+update:
+	ncu -u
+	bun install
+@PHONY: update
+
 # FORCE is a special target that always runs even if nothing has changed.
 FORCE:
 	@true

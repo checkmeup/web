@@ -1,13 +1,15 @@
 # Logs
 *.log
-npm-debug.log*
+logs
 
 # Misc
-node_modules
 .DS_Store
+*.local
+*.tsbuildinfo
+coverage
 dist
+node_modules
 
 # Editor directories and files
-.vscode/*
-!.vscode/settings.json
 !.vscode/extensions.json
+.vscode/*

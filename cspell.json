@@ -1,9 +1,10 @@
 {
   "version": "0.2",
-  "ignorePaths": [],
+  "ignorePaths": ["node_modules", "dist"],
   "dictionaryDefinitions": [],
   "dictionaries": ["docker", "node", "typescript"],
   "words": ["checkmeup", "molyuk", "pinia", "segmentless", "steiger", "vite"],
   "ignoreWords": [],
-  "import": []
+  "import": [],
+  "files": ["**/*.ts", "**/*.js", "**/*.vue", "**/*.json", "**/*.md", "**/*.txt", "**/*.yml", "**/*.yaml"]
 }

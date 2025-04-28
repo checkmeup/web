@@ -11,7 +11,7 @@ Feature Sliced Design (FSD) is an architectural methodology for frontend project
 3. **Isolation and Encapsulation**: Ensuring each slice and layer is isolated and encapsulated to reduce dependencies and improve modularity.
 4. **Explicit Dependencies**: Making dependencies between layers and slices explicit to improve clarity and maintainability.
 
-For more information about FSD, visit [Feature Sliced Design](https://www.feature-sliced.design/).
+For more information about FSD, visit [Feature Sliced Design](https://feature-sliced.github.io/documentation/).
 
 Each folder in the `src` directory represents a separate layer of the application and contains a `README.md` file with more information about the layer.
 

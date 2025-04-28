@@ -1,6 +1,6 @@
 {
   "version": "0.2",
-  "ignorePaths": ["node_modules", "dist"],
+  "ignorePaths": ["node_modules", "dist", "preview"],
   "dictionaryDefinitions": [],
   "dictionaries": ["docker", "node", "typescript"],
   "words": ["checkmeup", "molyuk", "pinia", "segmentless", "steiger", "vite"],

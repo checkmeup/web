@@ -6,7 +6,7 @@ logs
 .DS_Store
 *.local
 *.tsbuildinfo
-coverage
+preview
 dist
 node_modules
 

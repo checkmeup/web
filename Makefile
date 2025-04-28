@@ -2,13 +2,17 @@ dev:
 	bun run dev
 @PHONY: dev
 
-build: format lint
+build: test
 	bun run build
 @PHONY: build
 
-test:
-	bun test
+test: lint
+	bun run test
 @PHONY: test
+
+preview: FORCE
+	bun run preview
+@PHONY: preview 
 
 lint: format
 	bun run lint
@@ -23,3 +27,8 @@ format:
 install:
 	bun install
 @PHONY: install
+
+# FORCE is a special target that always runs even if nothing has changed.
+FORCE:
+	@true
+@PHONY: FORCE

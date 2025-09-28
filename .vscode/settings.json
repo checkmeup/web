@@ -1,8 +1,5 @@
 {
-  "cSpell.words": [
-    "checkmeup",
-    "vitepress"
-  ],
+  "cSpell.words": ["checkmeup", "vitepress"],
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true

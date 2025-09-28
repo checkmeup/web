@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ButtonBadge, { type ButtonBadgeProps } from './ButtonBadge.vue'
-import { useInterval } from '@vueuse/core'
-import { watch } from 'vue'
+import { useIntervalFn } from '@vueuse/core'
+import { onBeforeUnmount } from 'vue'
 import { useRandomItems } from '../composables/useRandom'
 
 export interface Framework {
@@ -11,38 +11,31 @@ export interface Framework {
   src: string
 }
 
-export interface FrameworksProps extends ButtonBadgeProps {
-  innerPadding?: number
+export interface FrameworksProps {
   maxItems?: number
-  numberToChange?: number
   delay?: number
   items?: Framework[]
 }
 
 const props = withDefaults(defineProps<FrameworksProps>(), {
-  width: 80,
-  bgColor: 'purple-50 dark:bg-api-default',
-  textSize: 'sm',
-  blur: 0,
-  shadow: 'none',
-  innerPadding: 4,
   maxItems: 15,
-  numberToChange: 1,
   delay: 2000,
   items: () => [],
 })
 
-const counter = useInterval(props.delay, {})
 const { items, update } = useRandomItems({
   maxItems: props.maxItems,
-  numberToChange: props.numberToChange,
   initItems: props.items,
 })
 
-watch(counter, () => {
+// Set up an interval to update the items periodically
+const { pause } = useIntervalFn(() => {
   update()
-})
+}, props.delay)
 
+onBeforeUnmount(() => pause())
+
+// run once at mount to initialize items
 update()
 
 function beforeLeave(el: any) {
@@ -56,7 +49,7 @@ function beforeLeave(el: any) {
 <template>
   <ul name="list" tag="ul" class="mb-5 reset-list flex flex-wrap items-center gap-5" @before-leave="beforeLeave">
     <li v-for="item in items" :key="item.id" class="w-1/5 sm:w-auto relative">
-      <ButtonBadge v-bind="props" :title="item.title" :href="item.href" :src="item.src" :padding="innerPadding" show-title />
+      <ButtonBadge v-bind="props" :title="item.title" :href="item.href" :src="item.src" :padding="4" show-title />
     </li>
   </ul>
 </template>

@@ -14,24 +14,24 @@ export function useRandomItems<Data = unknown>({ initItems, maxItems }: UseRando
   randomItems.value = initItems.sort(() => 0.5 - Math.random()).slice(0, maxItems)
 
   function update() {
-    if (maxItems <= 0) return
-    if (shuffledItems.value.length <= maxItems) return
+    if (maxItems <= 0 || shuffledItems.value.length <= maxItems) return
 
-    shuffledItems.value = shuffledItems.value.sort(() => 0.5 - Math.random())
-    let shuffledIndex = -1
-    for (let i = 0; i < shuffledItems.value.length; i++) {
-      if (randomItems.value.includes(shuffledItems.value[i])) continue
-      shuffledIndex = i
-      break
-    }
-    if (shuffledIndex === -1) return
+    // Find items not currently displayed
+    const availableItems = shuffledItems.value.filter((item) => !randomItems.value.includes(item))
+    if (availableItems.length === 0) return
 
+    // Pick a random available item
+    const randomAvailableItem = availableItems[Math.floor(Math.random() * availableItems.length)]
+
+    // Pick a random position to replace, avoiding the last changed position if possible
     let randomIndex = Math.floor(Math.random() * maxItems)
-    if (randomIndex === lastChangedIndex.value) randomIndex += 1
-    if (randomIndex >= maxItems) randomIndex = 0
+    if (randomIndex === lastChangedIndex.value && maxItems > 1) {
+      randomIndex = (randomIndex + 1) % maxItems
+    }
 
+    // Replace the item at the random position
     lastChangedIndex.value = randomIndex
-    randomItems.value[randomIndex] = shuffledItems.value[shuffledIndex]
+    randomItems.value[randomIndex] = randomAvailableItem
   }
 
   return { update, lastChangedIndex, items: randomItems }

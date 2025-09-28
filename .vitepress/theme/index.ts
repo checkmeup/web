@@ -15,7 +15,7 @@ export default {
       'home-features-after': () => h(HomeBody),
     })
   },
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }) {
     app.component('HomeBody', HomeBody)
   },
 } satisfies Theme

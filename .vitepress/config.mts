@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import tailwind from '@tailwindcss/vite'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: 'src',

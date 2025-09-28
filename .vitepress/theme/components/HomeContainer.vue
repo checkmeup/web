@@ -20,6 +20,7 @@ watch(targetIsVisible, () => {
 })
 </script>
 <template>
+  targetIsVisible: {{ targetIsVisible }} show: {{ show }}
   <div class="w-full" :class="{ 'max-w-[100vw] overflow-x-hidden overflow-y-visible': animate }">
     <div
       ref="target"
@@ -30,7 +31,7 @@ watch(targetIsVisible, () => {
         'transition-all ease-in-out delay-200 duration-1000 enter-active-class leave-active-class': props.animate,
       }"
     >
-      <div class="container">
+      <div class="container bg-red-200 border-2 border-red-300 rounded-lg p-6 md:p-12 my-12">
         <slot />
       </div>
     </div>

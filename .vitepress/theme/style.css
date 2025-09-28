@@ -43,6 +43,7 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 @import 'tailwindcss';
+@source "./**/*.vue";
 
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);

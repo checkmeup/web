@@ -40,38 +40,28 @@ update()
 
 function beforeLeave(el: any) {
   const { marginLeft, marginTop, width, height } = window.getComputedStyle(el)
-  el.style.left = `${el.offsetLeft - parseFloat(marginLeft)}px`
+  // Move the element off-screen before starting the leave transition to avoid layout flickers
+  el.style.left = '-1000px'
+  el.style.position = 'absolute'
   el.style.top = `${el.offsetTop - parseFloat(marginTop)}px`
   el.style.width = width
   el.style.height = height
+  el.style.left = `${el.offsetLeft - parseFloat(marginLeft)}px`
 }
 </script>
 <template>
-  <ul name="list" tag="ul" class="mb-5 reset-list flex flex-wrap items-center gap-5" @before-leave="beforeLeave">
-    <li v-for="item in items" :key="item.id" class="w-1/5 sm:w-auto relative">
+  <transition-group
+    tag="ul"
+    name="frameworks"
+    class="mb-5 reset-list relative flex flex-wrap items-center gap-5"
+    @before-leave="beforeLeave"
+    enter-active-class="transition-opacity transition-transform duration-500 ease-in-out"
+    leave-active-class="transition-opacity transition-transform duration-500 ease-in-out absolute"
+    enter-from-class="opacity-0 scale-90"
+    leave-to-class="opacity-0 scale-90"
+  >
+    <li v-for="item in items" :key="item.id" class="w-1/5 sm:w-auto relative flex-none">
       <ButtonBadge v-bind="props" :title="item.title" :href="item.href" :src="item.src" :padding="4" show-title />
     </li>
-  </ul>
+  </transition-group>
 </template>
-<style scoped>
-.list-item {
-  transition: all 1.5s ease;
-}
-
-.list-enter-active,
-.list-leave-active {
-  transition:
-    opacity 1.5s,
-    transform 1.5s;
-}
-
-.list-leave-active {
-  position: absolute;
-}
-
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: scale(0.9);
-}
-</style>

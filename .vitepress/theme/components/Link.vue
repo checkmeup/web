@@ -7,6 +7,7 @@ const props = withDefaults(defineProps<Props>(), {
   href: '',
 })
 </script>
+
 <template>
   <a :href="props.href"><slot /></a>
 </template>

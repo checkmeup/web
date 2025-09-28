@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@source "./**/*.vue";
+
+/* Configure both light and dark variants for VitePress */
+@variant light (:where(:not(.dark)) &);
+@variant dark (:where(.dark) &);

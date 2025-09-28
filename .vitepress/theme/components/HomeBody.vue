@@ -12,12 +12,7 @@ const isHome = computed(() => {
 })
 </script>
 <template>
-  <div class="bg-green-50">
-    <HomeContainer v-if="isHome" animate>
-      <HomeFrameworks>
-        Here are some of the libraries and technologies that we use or support with this
-        <strong>framework</strong>
-      </HomeFrameworks>
-    </HomeContainer>
-  </div>
+  <HomeContainer v-if="isHome" animate>
+    <HomeFrameworks />
+  </HomeContainer>
 </template>

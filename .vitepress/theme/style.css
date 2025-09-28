@@ -42,8 +42,6 @@
  * - `danger`: Used to show error, or dangerous message to the users. Used
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
-@import 'tailwindcss';
-@source "./**/*.vue";
 
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);

@@ -48,4 +48,67 @@ frameworks:
   - title: Node.js
     href: https://nodejs.org/
     src: /assets/icons/nodejs.png
+  - title: Bun
+    href: https://bun.sh/
+    src: /assets/icons/bun.png
+  - title: TypeScript
+    href: https://www.typescriptlang.org/
+    src: /assets/icons/typescript.png
+  - title: Express.js
+    href: https://expressjs.com/
+    src: /assets/icons/expressjs.svg
+  - title: Jest
+    href: https://jestjs.io/
+    src: /assets/icons/jest.svg
+  - title: Vitest
+    href: https://vitest.dev/
+    src: /assets/icons/vitest.png
+  - title: Mocha
+    href: https://mochajs.org/
+    src: /assets/icons/mochajs.svg
+  - title: Babel
+    href: https://babeljs.io/
+    src: /assets/icons/babel.svg
+  - title: Webpack
+    href: https://webpack.js.org/
+    src: /assets/icons/webpack.svg
+  - title: Swagger
+    href: /tutorials/swagger.html
+    src: /assets/icons/swagger.svg
+  - title: Passport
+    href: /tutorials/passport.html
+    src: /assets/icons/passportjs.png
+  - title: Stripe
+    href: /tutorials/stripe.html
+    src: /assets/icons/stripe.svg
+  - title: RabbitMQ
+    href: /docs/logger.html
+    src: /assets/icons/rabbitmq.svg
+  - title: Loggly
+    href: /docs/logger.html
+    src: /assets/icons/loggly.svg
+  - title: LogStash
+    href: /docs/logger.html
+    src: /assets/icons/elastic-logstash.svg
+  - title: Slack
+    href: /docs/logger.html
+    src: /assets/icons/slack.svg
+  - title: Serverless
+    href: /tutorials/serverless.html
+    src: /assets/icons/serverless.svg
+  - title: Terraform
+    href: /docs/platform-serverless.html
+    src: /assets/icons/terraform.png
+  - title: GitHub
+    href: https://github.com/
+    src: /assets/icons/github.svg
+  - title: Cloudflare
+    href: https://www.cloudflare.com/
+    src: /assets/icons/cloudflare.png
+  - title: Vitepress
+    href: https://vitepress.dev/
+    src: /assets/icons/vitepress.svg
+  - title: Vue.js
+    href: https://vuejs.org/
+    src: /assets/icons/vuejs.svg
 ---

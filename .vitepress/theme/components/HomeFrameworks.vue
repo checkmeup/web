@@ -13,9 +13,10 @@ const frameworks = (frontmatter.value.frameworks as Framework[]).map((item, inde
 <template>
   <article class="flex flex-col sm:flex-row pt-10 sm:pt-20 gap-10">
     <div class="text-center sm:text-left flex items-center">
-      <h3 class="text-2xl sm:text-5xl">
-        <slot />
-      </h3>
+      <div class="!text-2xl !sm:text-5xl">
+        This is a curated list of libraries, frameworks, and technologies that we use to build CheckMeUp and officially support for
+        integrations and tooling.
+      </div>
     </div>
     <Frameworks :items="frameworks" />
   </article>

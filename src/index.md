@@ -77,7 +77,7 @@ frameworks:
     src: /assets/icons/swagger.svg
   - title: Passport
     href: /tutorials/passport.html
-    src: /assets/icons/passportjs.png
+    src: /assets/icons/passportjs.svg
   - title: Stripe
     href: /tutorials/stripe.html
     src: /assets/icons/stripe.svg
@@ -98,7 +98,7 @@ frameworks:
     src: /assets/icons/serverless.svg
   - title: Terraform
     href: /docs/platform-serverless.html
-    src: /assets/icons/terraform.png
+    src: /assets/icons/terraform.svg
   - title: GitHub
     href: https://github.com/
     src: /assets/icons/github.svg
@@ -111,4 +111,7 @@ frameworks:
   - title: Vue.js
     href: https://vuejs.org/
     src: /assets/icons/vuejs.svg
+  - title: Go
+    href: https://golang.org/
+    src: /assets/icons/go.svg
 ---

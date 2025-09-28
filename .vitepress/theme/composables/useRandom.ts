@@ -3,52 +3,35 @@ import { ref } from 'vue'
 export interface UseRandomProps<Data = unknown> {
   initItems: Data[]
   maxItems: number
-  numberToChange: number
 }
 
-const getRandomIndex = (arrayLength: number) => {
-  if (arrayLength === 0) {
-    return 0
-  }
-  return Math.floor(Math.random() * arrayLength)
-}
-
-export function useRandomItems<Data = unknown>({ initItems, maxItems, numberToChange }: UseRandomProps<Data>) {
+export function useRandomItems<Data = unknown>({ initItems, maxItems }: UseRandomProps<Data>) {
   const randomItems = ref<Data[]>([])
   const shuffledItems = ref<Data[]>([])
   const lastChangedIndex = ref<number>(-1)
 
+  shuffledItems.value = initItems
+  randomItems.value = initItems.sort(() => 0.5 - Math.random()).slice(0, maxItems)
+
   function update() {
-    if (initItems.length > 0) {
-      // Si randomItems est vide, remplir initialement avec 10 éléments aléatoires
-      if (randomItems.value.length === 0) {
-        shuffledItems.value = initItems.sort(() => 0.5 - Math.random()) as never
+    if (maxItems <= 0) return
+    if (shuffledItems.value.length <= maxItems) return
 
-        randomItems.value = shuffledItems.value.slice(0, maxItems)
-      } else {
-        const currentList = [...randomItems.value]
-
-        // Remplacer partiellement les éléments existants
-        for (let i = 0; i < numberToChange; i++) {
-          let randomItemIndex = getRandomIndex(currentList.length)
-
-          while (lastChangedIndex.value === randomItemIndex) {
-            randomItemIndex = getRandomIndex(currentList.length)
-          }
-
-          lastChangedIndex.value = randomItemIndex
-
-          const item = shuffledItems.value.pop()
-
-          if (item !== undefined) {
-            shuffledItems.value.unshift(currentList[randomItemIndex])
-            currentList[randomItemIndex] = item
-          }
-        }
-
-        randomItems.value = currentList
-      }
+    shuffledItems.value = shuffledItems.value.sort(() => 0.5 - Math.random())
+    let shuffledIndex = -1
+    for (let i = 0; i < shuffledItems.value.length; i++) {
+      if (randomItems.value.includes(shuffledItems.value[i])) continue
+      shuffledIndex = i
+      break
     }
+    if (shuffledIndex === -1) return
+
+    let randomIndex = Math.floor(Math.random() * maxItems)
+    if (randomIndex === lastChangedIndex.value) randomIndex += 1
+    if (randomIndex >= maxItems) randomIndex = 0
+
+    lastChangedIndex.value = randomIndex
+    randomItems.value[randomIndex] = shuffledItems.value[shuffledIndex]
   }
 
   return { update, lastChangedIndex, items: randomItems }

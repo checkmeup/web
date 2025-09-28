@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2717px" height="2717px" viewBox="0 0 2717 2717" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>passportjs</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="passport" transform="translate(358.500000, 109.000000)" fill-rule="nonzero">
+            <path d="M1000,0 C447.5,0 0,447.5 0,1000 L500,1000 C500,724 724,500 1000,500 L1000,0 Z" id="Path" fill="#D6FF00"></path>
+            <path d="M2000,1000 C2000,447.5 1552.5,0 1000,0 L1000,500 C1276,500 1500,724 1500,1000 L2000,1000 Z" id="Path" fill="#34E27A"></path>
+            <path d="M1000,2000 C1552.5,2000 2000,1552.5 2000,1000 L1500,1000 C1500,1276 1276,1500 1000,1500 L1000,2000 Z" id="Path" fill="#00B9F1"></path>
+            <polygon id="Path" fill="#000000" points="500 2000 500 1000 0 1000 0 2500 1000 2500 1000 2000"></polygon>
+        </g>
+    </g>
+</svg>

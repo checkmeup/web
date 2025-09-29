@@ -42,7 +42,7 @@ const items = [
 ]
 </script>
 <template>
-  <article class="py-10 space-y-12 text-gray-600 dark:text-gray-400">
+  <article class="py-10 sm:pt-20 space-y-12 text-gray-600 dark:text-gray-400">
     <div class="text-2xl sm:text-3xl leading-normal">What you see is what you get</div>
 
     <section

@@ -12,7 +12,7 @@ const frameworks = (frontmatter.value.frameworks as Framework[]).map((item, inde
 </script>
 <template>
   <article>
-    <div class="text-2xl sm:text-3xl leading-normal py-10 text-gray-600 dark:text-gray-400">Quick example</div>
+    <div class="text-2xl sm:text-3xl leading-normal py-10 sm:pt-20 text-gray-600 dark:text-gray-400">Quick example</div>
     <div class="flex flex-col sm:flex-row gap-10 items-start">
       <!-- Left: Code example -->
       <div class="w-full sm:w-1/2 text-gray-300 dark:text-gray-400">

@@ -14,12 +14,10 @@ const frameworks = (frontmatter.value.frameworks as Framework[]).map((item, inde
   <article class="flex flex-col sm:flex-row pt-10 sm:pt-20 gap-10">
     <div class="text-center sm:text-left flex items-center text-gray-600 dark:text-gray-400">
       <div>
-        <div class="text-2xl sm:text-3xl leading-normal">
-          Our carefully curated collection of modern technologies, frameworks, and tools that power CheckMeUp's infrastructure.
-        </div>
+        <div class="text-2xl sm:text-3xl leading-normal">Trusted technologies and tools</div>
         <p class="py-6 text-normal sm:text-lg">
-          These are the battle-tested solutions we rely on daily, with first-class support for seamless integrations, comprehensive tooling,
-          and developer-friendly APIs.
+          We rely on proven, production-ready tools and open-source projects whose stability and ecosystems let us focus on reliability,
+          seamless integrations, and helping you ship with confidence.
         </p>
       </div>
     </div>

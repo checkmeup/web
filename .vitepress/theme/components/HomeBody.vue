@@ -6,6 +6,7 @@ import HomeProduct from './HomeProduct.vue'
 import HomeExample from './HomeExample.vue'
 import HomeFrameworks from './HomeFrameworks.vue'
 import HomeTestimonials from './HomeTestimonials.vue'
+import HomePricing from './HomePricing.vue'
 
 const route = useRoute()
 </script>

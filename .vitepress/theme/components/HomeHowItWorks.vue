@@ -3,7 +3,7 @@ import HomeContainer from './HomeContainer.vue'
 </script>
 <template>
   <HomeContainer>
-    <article class="py-10 text-gray-600 dark:text-gray-400">
+    <article class="py-10 sm:py-20 text-gray-600 dark:text-gray-400">
       <div class="text-2xl sm:text-3xl leading-normal">How it works</div>
       <p class="py-6 text-normal sm:text-lg">
         When you create a scheduled check we give you a unique URL (a heartbeat endpoint). Your service or scheduler pings that URL on the

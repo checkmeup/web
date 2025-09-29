@@ -19,7 +19,7 @@ const loaded = ref(false)
     <figure data-testid="button-badge-content" class="text-xs flex flex-col relative no-underline">
       <span
         v-lazyload-observer
-        class="VPImage h-20 w-20 flex items-center justify-center rounded-2xl overflow-hidden transform transition-transform duration-200 ease-out hover:scale-110 focus:scale-110 text-red-300 dark:text-purple-300 bg-gradient-to-br from-purple-200 to-slate-100 dark:from-purple-400 dark:to-slate-800"
+        class="VPImage h-20 w-20 flex items-center justify-center rounded-2xl overflow-hidden transform transition-transform duration-200 ease-out hover:scale-110 focus:scale-110 bg-gradient-to-br from-purple-200 to-slate-100 dark:from-purple-400 dark:to-slate-800"
       >
         <img
           v-if="props.src"

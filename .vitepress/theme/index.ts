@@ -10,6 +10,7 @@ import Frameworks from './components/Frameworks.vue'
 import ExternalLink from './components/Link.vue'
 import ButtonBadge from './components/ButtonBadge.vue'
 import LazyLoadObserver from './directives/lazyLoadObserver'
+import HomeHowItWorks from './components/HomeHowItWorks.vue'
 
 import './tailwind.css'
 import './style.css'
@@ -19,6 +20,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'home-features-before': () => h(HomeHowItWorks),
       'home-features-after': () => h(HomeBody),
     })
   },

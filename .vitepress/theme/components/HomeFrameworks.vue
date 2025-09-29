@@ -12,7 +12,7 @@ const frameworks = (frontmatter.value.frameworks as Framework[]).map((item, inde
 </script>
 <template>
   <article class="flex flex-col sm:flex-row pt-10 sm:pt-20 gap-10">
-    <div class="text-center sm:text-left flex items-center">
+    <div class="text-center sm:text-left flex items-center text-gray-600 dark:text-gray-400">
       <div>
         <div class="text-2xl sm:text-3xl leading-normal">
           Our carefully curated collection of modern technologies, frameworks, and tools that power CheckMeUp's infrastructure.

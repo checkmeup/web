@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: 'Sleep easy with instant cron alerts'
+  name: 'Automated checks for your scheduled tasks'
   text: ''
-  tagline: Dead man's switch monitoring for cron jobs - get instant alerts when your automated tasks fail so you sleep soundly knowing systems are protected.
+  tagline: Get clear alerts when your cron jobs, scheduled tasks, and server heartbeats fail before they impact your systems and users.
   image:
     src: /assets/undraw_checking-boxes_j0im.svg
     alt: VitePress

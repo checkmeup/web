@@ -20,10 +20,10 @@ const show = computed(() => !props.animate || targetIsVisible.value)
 </script>
 
 <template>
-  <div class="w-full" :class="{ 'max-w-[100vw] overflow-x-hidden': props.animate }">
+  <div class="w-full" :class="{ 'max-w-[100vw] overflow-hidden': props.animate }">
     <div
       ref="target"
-      class="relative px-6 sm:px-12 lg:px-16"
+      class="relative px-6 py-2 sm:px-12 lg:px-16"
       :class="[
         {
           'opacity-0 scale-105 translate-y-6': !show,

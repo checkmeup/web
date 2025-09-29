@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonBadge, { type ButtonBadgeProps } from './ButtonBadge.vue'
+import ButtonBadge from './ButtonBadge.vue'
 import { useIntervalFn } from '@vueuse/core'
 import { onBeforeUnmount } from 'vue'
 import { useRandomItems } from '../composables/useRandom'
@@ -41,7 +41,7 @@ update()
 function beforeLeave(el: any) {
   const { marginLeft, marginTop, width, height } = window.getComputedStyle(el)
   // Move the element off-screen before starting the leave transition to avoid layout flickers
-  el.style.left = '-1000px'
+  el.style.left = '-3000px'
   el.style.position = 'absolute'
   el.style.top = `${el.offsetTop - parseFloat(marginTop)}px`
   el.style.width = width

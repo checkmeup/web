@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useElementVisibility } from '@vueuse/core'
 
 interface HomeContainerProps {
@@ -12,11 +12,19 @@ const props = withDefaults(defineProps<HomeContainerProps>(), {
 
 const target = ref<HTMLElement | null>(null)
 const targetIsVisible = useElementVisibility(target, {
-  threshold: 0.3,
+  threshold: 0.2,
+})
+
+// Track whether the target has ever been visible so it doesn't disappear after first reveal
+const hasBeenVisible = ref(false)
+// Keep hasBeenVisible true once the element becomes visible
+watch(targetIsVisible, (v) => {
+  if (v) hasBeenVisible.value = true
 })
 
 // Computed property for better reactivity and performance
-const show = computed(() => !props.animate || targetIsVisible.value)
+// If animate is false we always show; if animate is true we show when visible or once it has been visible
+const show = computed(() => !props.animate || targetIsVisible.value || hasBeenVisible.value)
 </script>
 
 <template>

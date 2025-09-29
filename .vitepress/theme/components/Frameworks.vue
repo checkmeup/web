@@ -53,7 +53,7 @@ function beforeLeave(el: any) {
   <transition-group
     tag="ul"
     name="frameworks"
-    class="mb-5 reset-list relative flex flex-wrap items-center gap-5"
+    class="mb-5 reset-list relative flex flex-wrap items-center justify-end gap-5"
     @before-leave="beforeLeave"
     enter-active-class="transition-opacity transition-transform duration-500 ease-in-out"
     leave-active-class="transition-opacity transition-transform duration-500 ease-in-out absolute"

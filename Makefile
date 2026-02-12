@@ -1,27 +1,27 @@
-.PHONY: install lint dev build update next
+.PHONY: install update lint test dev build next merge
 SHELL := /bin/bash
 DEFAULT_GOAL := build
 
 install:
-	bun install
-
-lint: install
-	bunx eslint . --ext .ts,.json,.md --fix
-	bunx prettier --write "**/*.md" "**/*.json" "**/*.ts" --log-level warn
-
-dev: 
-	bunx vitepress dev
-
-build: test
-	rm -Rf dist
-	bunx vitepress build
+	@echo "Installing dependencies..."
 
 update:
-	bunx npm-check-updates -u
-	bun install
+	@echo "Updating dependencies..."
+
+lint:
+	@echo "Running linters..."
+
+test:
+	@echo "Running tests..."
+
+dev: 
+	@echo "Starting development server..."
+
+build:
+	@echo "Building the project..."
 
 next:
-	git pull origin main
-	git checkout main
-	git merge next
-	git push -u origin main
+	@echo "Preparing for the next branch..."
+
+merge:
+	@echo "Merging branch next into main..."

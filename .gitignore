@@ -6,7 +6,3 @@ package-lock.json
 # Ignore operating system files
 Thumbs.db
 .DS_Store
-
-# Ignore build output directories
-.vitepress/dist/
-.vitepress/cache/

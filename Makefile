@@ -4,21 +4,27 @@ DEFAULT_GOAL := build
 
 install:
 	@echo "Installing dependencies..."
+	bun install
 
 update:
 	@echo "Updating dependencies..."
+	bun update
 
 lint:
 	@echo "Running linters..."
+	bun run lint
 
 test:
 	@echo "Running tests..."
+	bun test
 
 dev: 
 	@echo "Starting development server..."
+	bun run dev
 
 build:
 	@echo "Building the project..."
+	bun run build
 
 next:
 	@echo "Preparing for the next branch..."

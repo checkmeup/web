@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { useCounterStore } from "../entities/stores";
+import "./styles/tailwind.css";
 
 const counter = useCounterStore();
 </script>
 
 <template>
   <div>
-    <h1>You did it!</h1>
+    <h1 class="text-3xl text-green-600">You did it!</h1>
 
     <section>
       <h2>Counter (Pinia)</h2>

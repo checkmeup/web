@@ -1,2 +1,2 @@
 // Shared config exports
-export {};
+export {}

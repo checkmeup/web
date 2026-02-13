@@ -1,2 +1,2 @@
 // Styles barrel export
-export {};
+export {}

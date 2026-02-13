@@ -9,3 +9,6 @@ Thumbs.db
 
 # Ignore build artifacts
 dist/
+
+# Ignore ESLint cache
+.eslintcache

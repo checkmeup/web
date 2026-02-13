@@ -18,6 +18,10 @@ test:
 	@echo "Running tests..."
 	bun test
 
+format:
+	@echo "Formatting code..."
+	bun run format
+
 dev: 
 	@echo "Starting development server..."
 	bun run dev

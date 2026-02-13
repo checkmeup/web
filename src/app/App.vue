@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useCounterStore } from "../entities/stores";
-import "./styles/tailwind.css";
+import { useCounterStore } from '../entities/stores'
+import './styles/tailwind.css'
 
-const counter = useCounterStore();
+const counter = useCounterStore()
 </script>
 
 <template>

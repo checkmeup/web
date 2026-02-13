@@ -1,4 +1,4 @@
 // Styles barrel export (loads Tailwind)
-import "./tailwind.css";
+import './tailwind.css'
 
-export {};
+export {}

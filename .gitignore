@@ -12,3 +12,6 @@ dist/
 
 # Ignore ESLint cache
 .eslintcache
+
+# Ignore Vitest coverage reports
+coverage/

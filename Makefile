@@ -8,15 +8,17 @@ install:
 
 update:
 	@echo "Updating dependencies..."
+	npx ncu -u
+	bun install
 	bun update
 
-lint:
+lint: format
 	@echo "Running linters..."
 	bun run lint
 
-test:
+test: lint
 	@echo "Running tests..."
-	bun test
+	bun run test
 
 format:
 	@echo "Formatting code..."
@@ -26,7 +28,7 @@ dev:
 	@echo "Starting development server..."
 	bun run dev
 
-build:
+build: test
 	@echo "Building the project..."
 	bun run build
 

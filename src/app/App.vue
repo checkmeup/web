@@ -1,21 +1,10 @@
 <script setup lang="ts">
-import { useCounterStore } from '../entities/stores'
-import './styles/tailwind.css'
-
-const counter = useCounterStore()
+import './styles'
 </script>
 
 <template>
-  <div>
-    <h1 class="text-3xl text-green-600">You did it!</h1>
-
-    <section>
-      <h2>Counter (Pinia)</h2>
-      <p>Count: {{ counter.count }}</p>
-      <button @click="counter.increment()">Increment</button>
-    </section>
-
-    <p>Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the documentation</p>
+  <div class="h-dvh flex items-center justify-center">
+    <h1 class="text-3xl text-green-600">Hello, World!</h1>
   </div>
 </template>
 

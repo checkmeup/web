@@ -13,6 +13,12 @@ import vueFsdPlugin from "eslint-plugin-vue-fsd";
 export default defineConfigWithVueTs(
   ...vueFsdPlugin.configs.recommended,
   {
+    name: "*.test.ts",
+    rules: {
+      "vue-fsd/fsd-layers": "off", // Allow test files to import from any layer
+    },
+  },
+  {
     name: "app/files-to-lint",
     files: ["**/*.{vue,ts,mts,tsx}"],
   },

@@ -71,9 +71,11 @@ jobs:
         run: bun run build
 
       - name: Deploy to Cloudflare Pages
+        if: ${{ steps.vars.outputs.REF_TYPE == 'tag' }}
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: ${{ secrets.CF_PAGES_PROJECT_NAME }}
+          production: true
           directory: './dist'

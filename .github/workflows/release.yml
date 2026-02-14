@@ -83,8 +83,7 @@ jobs:
         if: ${{ steps.vars.outputs.REF_TYPE == 'tag' }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           PROJECT_NAME: ${{ secrets.CF_PAGES_PROJECT_NAME }}
         run: |
           echo "Publishing ./dist to Pages project '$PROJECT_NAME' on branch 'main'"
-          npx wrangler@4 pages publish ./dist --project-name "$PROJECT_NAME" --branch main --account-id "$ACCOUNT_ID" --commit-dirty
+          npx wrangler@4 pages publish ./dist --project-name "$PROJECT_NAME" --branch main --commit-dirty

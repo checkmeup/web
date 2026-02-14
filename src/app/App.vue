@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import './styles'
+import pkg from '../../package.json'
 
 const year = new Date().getFullYear()
+const version = pkg.version || '0.0.0'
 </script>
 
 <template>
@@ -48,9 +50,9 @@ const year = new Date().getFullYear()
     </main>
 
     <footer class="border-t border-gray-200">
-      <div class="max-w-4xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
+        <div class="max-w-4xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
         <span>© {{ year }} CheckMeUp</span>
-        <span>Made with ♥</span>
+        <span>v{{ version }} — Made with ♥ in Israel</span>
       </div>
     </footer>
   </div>

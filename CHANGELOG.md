@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/checkmeup/web/compare/v1.4.0...v1.5.0) (2026-02-14)
+
+
+### Features
+
+* add production publishing step to Cloudflare Pages deployment ([7c0731c](https://github.com/checkmeup/web/commit/7c0731c85c144a4c8e9b20c3287d929534c786c3))
+
 # [1.4.0](https://github.com/checkmeup/web/compare/v1.3.0...v1.4.0) (2026-02-14)
 
 

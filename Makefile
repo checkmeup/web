@@ -16,7 +16,7 @@ lint: format
 	@echo "Running linters..."
 	bun run lint
 
-test: lint
+test:
 	@echo "Running tests..."
 	bun run test
 

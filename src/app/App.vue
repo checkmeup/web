@@ -50,7 +50,7 @@ const version = pkg.version || '0.0.0'
     </main>
 
     <footer class="border-t border-gray-200">
-        <div class="max-w-4xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
+      <div class="max-w-4xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
         <span>© {{ year }} CheckMeUp</span>
         <span>v{{ version }} — Made with ♥ in Israel</span>
       </div>

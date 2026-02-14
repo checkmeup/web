@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/checkmeup/web/compare/v1.5.0...v1.5.1) (2026-02-14)
+
+
+### Bug Fixes
+
+* remove unused ACCOUNT_ID from Cloudflare Pages publish step ([5537174](https://github.com/checkmeup/web/commit/5537174303b0a2ed640f8970f4e19b37eb5b6890))
+
 # [1.5.0](https://github.com/checkmeup/web/compare/v1.4.0...v1.5.0) (2026-02-14)
 
 

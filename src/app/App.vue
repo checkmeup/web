@@ -23,8 +23,12 @@ const year = new Date().getFullYear()
         <p class="mt-4 text-lg text-gray-600">Lightweight uptime and health checks with actionable alerts and beautiful dashboards.</p>
 
         <div class="mt-8 flex justify-center gap-4">
-          <a class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700" href="#">Get started — it's free</a>
-          <a class="inline-flex items-center px-6 py-3 border border-gray-200 rounded-md text-gray-700 hover:bg-gray-100" href="#">Learn more</a>
+          <a class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700" href="#"
+            >Get started — it's free</a
+          >
+          <a class="inline-flex items-center px-6 py-3 border border-gray-200 rounded-md text-gray-700 hover:bg-gray-100" href="#"
+            >Learn more</a
+          >
         </div>
 
         <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">

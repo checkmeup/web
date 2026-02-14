@@ -1,0 +1,72 @@
+name: Release
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 'latest'
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Get previous latest tag
+        id: prev
+        run: |
+          set -e
+          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          echo "PREV_TAG=$PREV_TAG" >> $GITHUB_OUTPUT
+
+      - name: Run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bun run release
+
+      - name: Fetch tags
+        run: git fetch --tags --prune
+
+      - name: Determine released ref
+        id: vars
+        run: |
+          set -e
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          PREV_TAG="${{ steps.prev.outputs.PREV_TAG }}"
+          if [ -n "$LATEST_TAG" ] && [ "$LATEST_TAG" != "$PREV_TAG" ]; then
+            echo "REF_TYPE=tag" >> $GITHUB_OUTPUT
+            echo "REF_VALUE=$LATEST_TAG" >> $GITHUB_OUTPUT
+          else
+            echo "REF_TYPE=commit" >> $GITHUB_OUTPUT
+            echo "REF_VALUE=${GITHUB_SHA}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout released tag or original commit
+        run: |
+          git checkout "${{ steps.vars.outputs.REF_VALUE }}"
+
+      - name: Install dependencies (after checkout)
+        run: bun install --force || bun install
+
+      - name: Build
+        run: bun run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          directory: './dist'

@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/checkmeup/web/compare/v1.0.0...v1.1.0) (2026-02-14)
+
+
+### Features
+
+* add projectName to Cloudflare Pages deployment configuration ([8221406](https://github.com/checkmeup/web/commit/8221406ff7604a10ed924317761c96c335412b9d))
+
 # 1.0.0 (2026-02-14)
 
 

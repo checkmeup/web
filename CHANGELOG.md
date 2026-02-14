@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/checkmeup/web/compare/v1.3.0...v1.4.0) (2026-02-14)
+
+
+### Features
+
+* update Cloudflare Pages deployment step to include production flag ([469b3ff](https://github.com/checkmeup/web/commit/469b3ff450359306f88342623639ec271a50f283))
+
 # [1.3.0](https://github.com/checkmeup/web/compare/v1.2.0...v1.3.0) (2026-02-14)
 
 

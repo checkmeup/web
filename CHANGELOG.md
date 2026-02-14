@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/checkmeup/web/compare/v1.2.0...v1.3.0) (2026-02-14)
+
+
+### Features
+
+* add linter and test steps to release workflow; update test target in Makefile; fix footer indentation in App.vue ([ba12d11](https://github.com/checkmeup/web/commit/ba12d11cc76f75abef994d4f364a45f1cbf4e469))
+* update page title and footer to include version information ([608696a](https://github.com/checkmeup/web/commit/608696a4ddd62527a77fdeb6f48e1d2ee74b8109))
+
 # [1.2.0](https://github.com/checkmeup/web/compare/v1.1.0...v1.2.0) (2026-02-14)
 
 

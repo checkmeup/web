@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/checkmeup/web/compare/v1.1.0...v1.2.0) (2026-02-14)
+
+
+### Features
+
+* remove Pricing link from navigation ([003692f](https://github.com/checkmeup/web/commit/003692f797b90c31a83b98841697e86902f11d64))
+
 # [1.1.0](https://github.com/checkmeup/web/compare/v1.0.0...v1.1.0) (2026-02-14)
 
 

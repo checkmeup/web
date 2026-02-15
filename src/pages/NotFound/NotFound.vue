@@ -1,6 +1,5 @@
 <script setup lang="ts">
 // NotFound page — FSD: pages/NotFound
-declare const defineOptions: (opts: Record<string, unknown>) => void
 defineOptions({ name: 'NotFoundPage' })
 </script>
 

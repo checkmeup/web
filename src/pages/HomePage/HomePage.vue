@@ -1,6 +1,5 @@
 <script setup lang="ts">
 // Home page — FSD: pages/HomePage
-declare const defineOptions: (opts: Record<string, unknown>) => void
 defineOptions({ name: 'HomePage' })
 </script>
 

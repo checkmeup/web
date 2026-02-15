@@ -1,6 +1,5 @@
 <script setup lang="ts">
 // Name the component with a multi-word name to satisfy the `vue/multi-word-component-names` rule
-declare const defineOptions: (opts: Record<string, unknown>) => void
 defineOptions({ name: 'AppHeader' })
 </script>
 

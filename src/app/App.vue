@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import './styles'
 import pkg from '../../package.json'
+import { AppFooter as Footer, AppHeader as Header } from '../widgets/layout'
 
 const year = new Date().getFullYear()
 const envVersion = (import.meta.env && import.meta.env.VITE_APP_VERSION) || undefined
@@ -9,15 +10,7 @@ const version = envVersion || pkg.version || '0.0.0'
 
 <template>
   <div class="min-h-screen bg-gray-50 flex flex-col">
-    <header class="max-w-4xl mx-auto w-full p-6">
-      <nav class="flex items-center justify-between">
-        <div class="text-xl font-semibold">CheckMeUp</div>
-        <div class="space-x-4">
-          <a href="#" class="text-sm text-gray-700 hover:text-gray-900">Docs</a>
-          <a href="#" class="text-sm text-indigo-600 font-medium">Sign in</a>
-        </div>
-      </nav>
-    </header>
+    <Header />
 
     <main class="flex-1 flex items-center">
       <div class="max-w-4xl mx-auto px-6 py-20 text-center">
@@ -50,12 +43,7 @@ const version = envVersion || pkg.version || '0.0.0'
       </div>
     </main>
 
-    <footer class="border-t border-gray-200">
-      <div class="max-w-4xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
-        <span>© {{ year }} CheckMeUp</span>
-        <span>v{{ version }} — Made with ♥ in Israel</span>
-      </div>
-    </footer>
+    <Footer :year="year" :version="version" />
   </div>
 </template>
 

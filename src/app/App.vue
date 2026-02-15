@@ -3,7 +3,8 @@ import './styles'
 import pkg from '../../package.json'
 
 const year = new Date().getFullYear()
-const version = pkg.version || '0.0.0'
+const envVersion = (import.meta.env && import.meta.env.VITE_APP_VERSION) || undefined
+const version = envVersion || pkg.version || '0.0.0'
 </script>
 
 <template>

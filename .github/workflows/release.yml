@@ -68,7 +68,18 @@ jobs:
         run: bun install --force || bun install
 
       - name: Build
-        run: bun run build
+        env:
+          REF_TYPE: ${{ steps.vars.outputs.REF_TYPE }}
+          REF_VALUE: ${{ steps.vars.outputs.REF_VALUE }}
+        run: |
+          if [ "$REF_TYPE" = "tag" ]; then
+            # strip leading v if present
+            VERSION=$(echo "$REF_VALUE" | sed 's/^v//')
+          else
+            VERSION=$(node -e "console.log(require('./package.json').version)")
+          fi
+          echo "Building with VITE_APP_VERSION=$VERSION"
+          VITE_APP_VERSION=$VERSION bun run build
 
       - name: Deploy to Cloudflare Pages
         if: ${{ steps.vars.outputs.REF_TYPE == 'tag' }}

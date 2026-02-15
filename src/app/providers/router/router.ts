@@ -8,6 +8,11 @@ const router = createRouter({
       name: 'Home',
       component: () => import('@/pages/HomePage'),
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('@/pages/NotFound'),
+    },
   ],
 })
 

@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/checkmeup/web/compare/v1.6.0...v1.7.0) (2026-02-15)
+
+
+### Bug Fixes
+
+* update import paths for HomePage and NotFound components in router ([376439d](https://github.com/checkmeup/web/commit/376439d79aa7ff3a699ca5fd63b62bba4bf0595d))
+
+
+### Features
+
+* add HomePage component and configure router for home route ([471d93b](https://github.com/checkmeup/web/commit/471d93bf28ec37cbb3a2bf115b856806a330a84f))
+* add NotFound page component and update router for 404 handling ([4a0c0a8](https://github.com/checkmeup/web/commit/4a0c0a8d8fbe305e9858a19019f2504d7466b5c8))
+* implement AppHeader and AppFooter components with layout integration ([afaaaf2](https://github.com/checkmeup/web/commit/afaaaf22057c2b5ae477920392e75ed42d893bd3))
+
 # [1.6.0](https://github.com/checkmeup/web/compare/v1.5.1...v1.6.0) (2026-02-15)
 
 

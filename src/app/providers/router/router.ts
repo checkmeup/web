@@ -6,12 +6,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: () => import('@/pages/HomePage'),
+      component: () => import('../../../pages/HomePage'),
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
-      component: () => import('@/pages/NotFound'),
+      component: () => import('../../../pages/NotFound'),
     },
   ],
 })

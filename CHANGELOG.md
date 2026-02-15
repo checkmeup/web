@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/checkmeup/web/compare/v1.7.0...v1.7.1) (2026-02-15)
+
+
+### Bug Fixes
+
+* remove redundant declarations of defineOptions in Vue components ([1d922bc](https://github.com/checkmeup/web/commit/1d922bc1c7523ed2ab0cb90a02b1bd8ada273b4f))
+
 # [1.7.0](https://github.com/checkmeup/web/compare/v1.6.0...v1.7.0) (2026-02-15)
 
 

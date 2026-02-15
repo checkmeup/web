@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/checkmeup/web/compare/v1.5.1...v1.6.0) (2026-02-15)
+
+
+### Features
+
+* enhance build process to set VITE_APP_VERSION based on tag or package version ([75df6a3](https://github.com/checkmeup/web/commit/75df6a3bcdd33937cb8f71034bb740e148c34549))
+
 ## [1.5.1](https://github.com/checkmeup/web/compare/v1.5.0...v1.5.1) (2026-02-14)
 
 
